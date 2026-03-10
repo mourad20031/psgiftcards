@@ -36,7 +36,7 @@
             border: 1px solid #F0F0F0;
         }
 
-        /* --- 16:9 logo area --- */
+        /* --- 16:9 logo area (FIXED TO FIT IMAGE) --- */
         .logo-container {
             width: 100%;
             max-width: 680px;
@@ -52,14 +52,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 1.2rem;
+            padding: 0;                     /* removed padding so image uses full space */
             transition: border 0.2s ease;
+            overflow: hidden;                /* keeps image inside rounded borders */
         }
 
         .logo-image {
-            max-width: 85%;
-            max-height: 80%;
-            object-fit: contain;
+            width: 100%;                     /* fill full width */
+            height: 100%;                    /* fill full height */
+            object-fit: cover;               /* cover the area without distortion (may crop slightly) */
             display: block;
         }
 
@@ -250,7 +251,7 @@
 </head>
 <body>
     <div class="card">
-        <!-- 16:9 logo area (unchanged, prominent) -->
+        <!-- 16:9 logo area – now with fixed image sizing to fill the box -->
         <div class="logo-container">
             <div class="logo-frame">
                 <img class="logo-image" src="https://i.postimg.cc/9z3NQJc1/Pokemon-go-image-1-new.webp" alt="Pokémon GO logo">
