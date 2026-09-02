@@ -1302,9 +1302,12 @@ _stq.push([ "clickTrackerInit", "251571336", "2" ]);
 }
 
 
-	<script>
+
+
+	
+<script>
 document.addEventListener('DOMContentLoaded', function() {
-    // ===== PREMIUM SEARCH FUNCTIONALITY - FIXED =====
+    // ===== PREMIUM SEARCH FUNCTIONALITY - KEEP PAGE INTACT =====
     const searchToggle = document.getElementById('searchToggle');
     const searchClose = document.getElementById('searchClose');
     const headerDefault = document.getElementById('header-default');
@@ -1349,8 +1352,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     type: typeElement ? typeElement.textContent.trim() : '',
                     img: imgElement ? imgElement.getAttribute('src') : '',
                     rating: ratingElement ? ratingElement.textContent.trim() : '4.0',
-                    element: link,
-                    originalDisplay: link.style.display || ''
+                    element: link
                 });
             }
         });
@@ -1368,8 +1370,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     type: '',
                     img: imgElement ? imgElement.getAttribute('src') : '',
                     rating: '4.5',
-                    element: link,
-                    originalDisplay: link.style.display || ''
+                    element: link
                 });
             }
         });
@@ -1388,8 +1389,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     type: '',
                     img: imgElement ? imgElement.getAttribute('src') : '',
                     rating: '4.2',
-                    element: group,
-                    originalDisplay: group.style.display || ''
+                    element: group
                 });
             }
         });
@@ -1409,8 +1409,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     type: typeElement ? typeElement.textContent.trim() : '',
                     img: imgElement ? imgElement.getAttribute('src') : '',
                     rating: '4.0',
-                    element: link,
-                    originalDisplay: link.style.display || ''
+                    element: link
                 });
             }
         });
@@ -1430,8 +1429,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     type: typeElement ? typeElement.textContent.trim() : '',
                     img: imgElement ? imgElement.getAttribute('src') : '',
                     rating: '4.0',
-                    element: link,
-                    originalDisplay: link.style.display || ''
+                    element: link
                 });
             }
         });
@@ -1517,16 +1515,11 @@ document.addEventListener('DOMContentLoaded', function() {
         resultsContainer.style.display = 'block';
     }
     
-    // ===== PERFORM SEARCH - ONLY BY TITLE =====
+    // ===== PERFORM SEARCH - ONLY BY TITLE, KEEP PAGE INTACT =====
     function performSearch(query) {
         const searchTerm = query.toLowerCase().trim();
         
-        // Reset all items to visible first
-        allItems.forEach(function(item) {
-            if (item.element) {
-                item.element.style.display = '';
-            }
-        });
+        // DO NOT hide/show page items - keep page as is
         
         if (searchTerm === '') {
             resultsContainer.style.display = 'none';
@@ -1538,15 +1531,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return item.title.toLowerCase().includes(searchTerm);
         });
         
-        // Hide all items that don't match
-        allItems.forEach(function(item) {
-            if (item.element) {
-                const isMatch = item.title.toLowerCase().includes(searchTerm);
-                item.element.style.display = isMatch ? '' : 'none';
-            }
-        });
-        
-        // Render dropdown results
+        // Render dropdown results only - page stays unchanged
         renderResults(filtered, query);
     }
     
@@ -1586,12 +1571,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 searchInput.value = '';
             }
             resultsContainer.style.display = 'none';
-            
-            allItems.forEach(function(item) {
-                if (item.element) {
-                    item.element.style.display = '';
-                }
-            });
         });
     }
     
@@ -1721,7 +1700,7 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('💡 Press Ctrl+K or Cmd+K to open search');
 });
 </script>
-
+	
 	
 </body>
 </html>
