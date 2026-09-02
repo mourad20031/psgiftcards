@@ -48,6 +48,63 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <style id="wp-block-library-inline-css">
 :root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-color]){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
 
+
+
+	/* ===== SEARCH RESULTS DROPDOWN STYLING ===== */
+#searchResultsDropdown {
+    animation: searchFadeIn 0.2s ease-out;
+    scrollbar-width: thin;
+    scrollbar-color: #e5e7eb transparent;
+}
+
+#searchResultsDropdown::-webkit-scrollbar {
+    width: 4px;
+}
+
+#searchResultsDropdown::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#searchResultsDropdown::-webkit-scrollbar-thumb {
+    background: #e5e7eb;
+    border-radius: 9999px;
+}
+
+@keyframes searchFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ===== SEARCH INPUT FOCUS ===== */
+#headerSearchInput:focus {
+    box-shadow: none;
+}
+
+/* ===== SEARCH RESULTS ITEM HOVER ===== */
+#searchResultsDropdown a {
+    transition: all 0.15s ease;
+}
+
+/* ===== NO RESULT ANIMATION ===== */
+#searchResultsDropdown .flex.flex-col.items-center.justify-center.py-10 svg {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+
+
+
+	
 /*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
 </style>
 <style id="classic-theme-styles-inline-css">
@@ -1160,5 +1217,376 @@ _stq.push([ "clickTrackerInit", "251571336", "2" ]);
 
 
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"2593a8e69aef4063a91e2d18a482f482","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // ===== PREMIUM SEARCH FUNCTIONALITY =====
+    const searchToggle = document.getElementById('searchToggle');
+    const searchClose = document.getElementById('searchClose');
+    const headerDefault = document.getElementById('header-default');
+    const headerSearch = document.getElementById('header-search');
+    const searchInput = document.getElementById('headerSearchInput');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const sidebar = document.getElementById('sidebar');
+    const menuToggle = document.getElementById('menuToggle');
+    
+    // ===== CREATE SEARCH RESULTS DROPDOWN =====
+    const resultsContainer = document.createElement('div');
+    resultsContainer.id = 'searchResultsDropdown';
+    resultsContainer.className = 'absolute top-full left-0 right-0 mt-2 bg-white rounded-2xl shadow-2xl border border-gray-100 max-h-[70vh] overflow-y-auto hidden z-50';
+    resultsContainer.style.display = 'none';
+    
+    // Add search results container after header-search
+    const headerSearchParent = headerSearch ? headerSearch.parentNode : null;
+    if (headerSearchParent) {
+        headerSearchParent.style.position = 'relative';
+        headerSearchParent.appendChild(resultsContainer);
+    }
+    
+    // ===== COLLECT ALL GAME/APP ITEMS FROM THE PAGE =====
+    function getAllItems() {
+        const items = [];
+        const seenTitles = new Set();
+        
+        // Get items from "Latest Games" section
+        document.querySelectorAll('section:nth-of-type(3) .grid > a, section:nth-of-type(4) .grid > a, section:nth-of-type(5) .grid > a').forEach(function(link) {
+            const titleElement = link.querySelector('h3');
+            const categoryElement = link.querySelector('.truncate.text-xs.font-semibold.text-orange');
+            const typeElement = link.querySelector('.text-sm.text-gray-3 .truncate');
+            const imgElement = link.querySelector('.w-14.h-14 img');
+            const ratingElement = link.querySelector('.text-xs.flex.items-center.gap-0\\.5 span');
+            
+            if (titleElement && !seenTitles.has(titleElement.textContent.trim())) {
+                seenTitles.add(titleElement.textContent.trim());
+                items.push({
+                    title: titleElement.textContent.trim(),
+                    url: link.getAttribute('href'),
+                    category: categoryElement ? categoryElement.textContent.trim() : '',
+                    type: typeElement ? typeElement.textContent.trim() : '',
+                    img: imgElement ? imgElement.getAttribute('src') : '',
+                    rating: ratingElement ? ratingElement.textContent.trim() : '4.0',
+                    element: link,
+                    originalDisplay: link.style.display || ''
+                });
+            }
+        });
+        
+        // Get items from "Indispensable on your phone" section
+        document.querySelectorAll('.snap-start.shrink-0.w-\\[85\\%\\]').forEach(function(link) {
+            const titleElement = link.querySelector('h3');
+            if (titleElement && !seenTitles.has(titleElement.textContent.trim())) {
+                seenTitles.add(titleElement.textContent.trim());
+                const imgElement = link.querySelector('.w-10.h-10');
+                items.push({
+                    title: titleElement.textContent.trim(),
+                    url: link.getAttribute('href'),
+                    category: '⭐ Featured',
+                    type: '',
+                    img: imgElement ? imgElement.getAttribute('src') : '',
+                    rating: '4.5',
+                    element: link,
+                    originalDisplay: link.style.display || ''
+                });
+            }
+        });
+        
+        // Get items from "Must have collection"
+        document.querySelectorAll('.grid-cols-2.md\\:grid-cols-3.xl\\:grid-cols-4 .group.relative').forEach(function(link) {
+            const titleElement = link.querySelector('h2');
+            if (titleElement && !seenTitles.has(titleElement.textContent.trim())) {
+                seenTitles.add(titleElement.textContent.trim());
+                const imgElement = link.querySelector('img');
+                items.push({
+                    title: titleElement.textContent.trim(),
+                    url: link.querySelector('a') ? link.querySelector('a').getAttribute('href') : '#',
+                    category: '📦 Collection',
+                    type: '',
+                    img: imgElement ? imgElement.getAttribute('src') : '',
+                    rating: '4.2',
+                    element: link,
+                    originalDisplay: link.style.display || ''
+                });
+            }
+        });
+        
+        return items;
+    }
+    
+    let allItems = [];
+    
+    // ===== RENDER SEARCH RESULTS IN DROPDOWN =====
+    function renderResults(results, query) {
+        resultsContainer.innerHTML = '';
+        
+        if (query.trim() === '') {
+            resultsContainer.style.display = 'none';
+            return;
+        }
+        
+        if (results.length === 0) {
+            resultsContainer.innerHTML = `
+                <div class="flex flex-col items-center justify-center py-10 px-4">
+                    <svg class="w-14 h-14 text-gray-300 mb-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
+                        <path d="M440-120v-80h-80q-17 0-28.5-11.5T320-240q0-17 11.5-28.5T360-280h120v-80H200q-33 0-56.5-23.5T120-440v-280q0-33 23.5-56.5T200-800h560q33 0 56.5 23.5T840-720v280q0 33-23.5 56.5T760-360H480v80h120q17 0 28.5 11.5T640-240q0 17-11.5 28.5T600-200H480v80h-40Zm-240-240h560v-280H200v280Z"/>
+                    </svg>
+                    <p class="text-gray-400 font-medium">No results for "<span class="text-primary">${query}</span>"</p>
+                    <p class="text-gray-300 text-sm mt-1">Try different keywords</p>
+                </div>
+            `;
+            resultsContainer.style.display = 'block';
+            return;
+        }
+        
+        let html = `
+            <div class="p-3 border-b border-gray-100 sticky top-0 bg-white/95 backdrop-blur-sm z-10">
+                <div class="flex items-center justify-between">
+                    <span class="text-xs font-semibold text-gray-400">${results.length} result${results.length > 1 ? 's' : ''} found</span>
+                    <span class="text-xs text-gray-300">Press ESC to close</span>
+                </div>
+            </div>
+            <div class="p-2">
+        `;
+        
+        results.forEach(function(item) {
+            // Highlight matching text
+            let displayTitle = item.title;
+            const searchTerm = query.toLowerCase();
+            const lowerTitle = item.title.toLowerCase();
+            const index = lowerTitle.indexOf(searchTerm);
+            
+            if (index !== -1) {
+                const before = item.title.substring(0, index);
+                const match = item.title.substring(index, index + searchTerm.length);
+                const after = item.title.substring(index + searchTerm.length);
+                displayTitle = `${before}<span class="bg-primary/20 text-primary font-bold">${match}</span>${after}`;
+            }
+            
+            html += `
+                <a href="${item.url}" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-gray-50 transition-all duration-150 group no-underline">
+                    <div class="w-11 h-11 rounded-xl overflow-hidden shrink-0 bg-gray-100 shadow-sm ring-1 ring-gray-100 group-hover:ring-primary/20">
+                        ${item.img ? `<img src="${item.img}" class="w-full h-full object-cover" alt="${item.title}" loading="lazy">` : `
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/10 to-primary/5 text-primary font-bold text-sm">
+                                ${item.title.charAt(0).toUpperCase()}
+                            </div>
+                        `}
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <div class="text-sm font-semibold text-gray-800 truncate">${displayTitle}</div>
+                        <div class="flex items-center gap-2 text-xs">
+                            ${item.category ? `<span class="text-primary font-medium">${item.category}</span>` : ''}
+                            ${item.type ? `<span class="text-gray-400">•</span><span class="text-gray-500">${item.type}</span>` : ''}
+                            ${item.rating ? `<span class="text-gray-400">•</span><span class="flex items-center gap-0.5 text-amber-500">${item.rating} <svg class="w-3 h-3" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></span>` : ''}
+                        </div>
+                    </div>
+                    <svg class="w-4 h-4 text-gray-300 group-hover:text-primary transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
+                        <path d="M504-480 348-636l56-56 212 212-212 212-56-56 156-156Z"/>
+                    </svg>
+                </a>
+            `;
+        });
+        
+        html += `</div>`;
+        resultsContainer.innerHTML = html;
+        resultsContainer.style.display = 'block';
+    }
+    
+    // ===== PERFORM SEARCH =====
+    function performSearch(query) {
+        const searchTerm = query.toLowerCase().trim();
+        
+        if (searchTerm === '') {
+            resultsContainer.style.display = 'none';
+            // Show all items
+            allItems.forEach(function(item) {
+                if (item.element) {
+                    item.element.style.display = '';
+                }
+            });
+            return;
+        }
+        
+        // Filter items
+        const filtered = allItems.filter(function(item) {
+            const titleMatch = item.title.toLowerCase().includes(searchTerm);
+            const categoryMatch = item.category.toLowerCase().includes(searchTerm);
+            const typeMatch = item.type.toLowerCase().includes(searchTerm);
+            return titleMatch || categoryMatch || typeMatch;
+        });
+        
+        // Hide all items
+        allItems.forEach(function(item) {
+            if (item.element) {
+                item.element.style.display = 'none';
+            }
+        });
+        
+        // Show only matched items
+        filtered.forEach(function(item) {
+            if (item.element) {
+                item.element.style.display = '';
+            }
+        });
+        
+        // Render dropdown results
+        renderResults(filtered, query);
+    }
+    
+    // Initialize items after page load
+    setTimeout(function() {
+        allItems = getAllItems();
+    }, 500);
+    
+    // ===== SEARCH TOGGLE =====
+    if (searchToggle && headerDefault && headerSearch) {
+        searchToggle.addEventListener('click', function() {
+            headerDefault.classList.add('opacity-0', 'pointer-events-none', '-translate-x-4');
+            headerDefault.classList.remove('opacity-100', 'pointer-events-auto', 'translate-x-0');
+            
+            headerSearch.classList.remove('opacity-0', 'pointer-events-none', 'translate-x-4');
+            headerSearch.classList.add('opacity-100', 'pointer-events-auto', 'translate-x-0');
+            
+            setTimeout(function() {
+                if (searchInput) {
+                    searchInput.focus();
+                }
+            }, 100);
+        });
+    }
+    
+    if (searchClose && headerDefault && headerSearch) {
+        searchClose.addEventListener('click', function() {
+            headerSearch.classList.remove('opacity-100', 'pointer-events-auto', 'translate-x-0');
+            headerSearch.classList.add('opacity-0', 'pointer-events-none', 'translate-x-4');
+            
+            headerDefault.classList.remove('opacity-0', 'pointer-events-none', '-translate-x-4');
+            headerDefault.classList.add('opacity-100', 'pointer-events-auto', 'translate-x-0');
+            
+            if (searchInput) {
+                searchInput.value = '';
+                performSearch('');
+            }
+            resultsContainer.style.display = 'none';
+        });
+    }
+    
+    // ===== SEARCH INPUT LIVE =====
+    if (searchInput) {
+        searchInput.addEventListener('input', function(e) {
+            const query = e.target.value;
+            performSearch(query);
+        });
+        
+        // Close search with Escape key
+        searchInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                if (resultsContainer.style.display === 'block') {
+                    resultsContainer.style.display = 'none';
+                    e.preventDefault();
+                } else if (searchClose) {
+                    searchClose.click();
+                }
+            }
+        });
+        
+        // Navigate results with arrow keys
+        searchInput.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+                e.preventDefault();
+                const results = resultsContainer.querySelectorAll('a');
+                if (results.length === 0) return;
+                
+                let currentIndex = -1;
+                results.forEach(function(el, idx) {
+                    if (el.classList.contains('bg-gray-50')) {
+                        currentIndex = idx;
+                        el.classList.remove('bg-gray-50');
+                    }
+                });
+                
+                if (e.key === 'ArrowDown') {
+                    currentIndex = Math.min(currentIndex + 1, results.length - 1);
+                } else {
+                    currentIndex = Math.max(currentIndex - 1, 0);
+                }
+                
+                results[currentIndex].classList.add('bg-gray-50');
+                results[currentIndex].scrollIntoView({ block: 'nearest' });
+            }
+            
+            if (e.key === 'Enter') {
+                const selected = resultsContainer.querySelector('a.bg-gray-50');
+                if (selected) {
+                    window.location.href = selected.getAttribute('href');
+                } else {
+                    const firstResult = resultsContainer.querySelector('a');
+                    if (firstResult) {
+                        window.location.href = firstResult.getAttribute('href');
+                    }
+                }
+            }
+        });
+    }
+    
+    // ===== SIDEBAR TOGGLE =====
+    if (menuToggle && sidebar && sidebarOverlay) {
+        function openSidebar() {
+            sidebar.classList.remove('-translate-x-full');
+            sidebar.classList.add('translate-x-0');
+            sidebarOverlay.classList.remove('opacity-0', 'pointer-events-none');
+            sidebarOverlay.classList.add('opacity-100', 'pointer-events-auto');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeSidebar() {
+            sidebar.classList.remove('translate-x-0');
+            sidebar.classList.add('-translate-x-full');
+            sidebarOverlay.classList.remove('opacity-100', 'pointer-events-auto');
+            sidebarOverlay.classList.add('opacity-0', 'pointer-events-none');
+            document.body.style.overflow = '';
+        }
+        
+        menuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            if (sidebar.classList.contains('-translate-x-full')) {
+                openSidebar();
+            } else {
+                closeSidebar();
+            }
+        });
+        
+        sidebarOverlay.addEventListener('click', closeSidebar);
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeSidebar();
+            }
+        });
+    }
+    
+    // ===== CLOSE RESULTS ON OUTSIDE CLICK =====
+    document.addEventListener('click', function(e) {
+        if (resultsContainer && !resultsContainer.contains(e.target) && e.target !== searchInput && !searchToggle.contains(e.target)) {
+            resultsContainer.style.display = 'none';
+        }
+    });
+    
+    // ===== KEYBOARD SHORTCUT: Ctrl+K or Cmd+K to open search =====
+    document.addEventListener('keydown', function(e) {
+        if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+            e.preventDefault();
+            if (searchToggle) {
+                searchToggle.click();
+            }
+        }
+    });
+    
+    console.log('🔍 SMILFA Premium Search System Loaded!');
+    console.log('💡 Press Ctrl+K or Cmd+K to open search');
+    console.log(`📦 ${allItems.length} items indexed for search`);
+});
+</script>
+
+
+	
 </body>
 </html>
