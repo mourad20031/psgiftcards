@@ -50,11 +50,25 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
 
 
-	/* ===== SEARCH RESULTS DROPDOWN STYLING ===== */
+	
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+
+
+
+
+	<style>
+/* ===== SEARCH RESULTS DROPDOWN STYLING ===== */
 #searchResultsDropdown {
     animation: searchFadeIn 0.2s ease-out;
     scrollbar-width: thin;
     scrollbar-color: #e5e7eb transparent;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12), 0 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 16px;
 }
 
 #searchResultsDropdown::-webkit-scrollbar {
@@ -84,11 +98,24 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 /* ===== SEARCH INPUT FOCUS ===== */
 #headerSearchInput:focus {
     box-shadow: none;
+    outline: none;
 }
 
 /* ===== SEARCH RESULTS ITEM HOVER ===== */
 #searchResultsDropdown a {
     transition: all 0.15s ease;
+}
+
+/* ===== RESPONSIVE DROPDOWN ===== */
+@media (max-width: 640px) {
+    #searchResultsDropdown {
+        max-height: 60vh;
+        margin-top: 8px;
+        border-radius: 16px;
+        left: 8px;
+        right: 8px;
+        width: auto;
+    }
 }
 
 /* ===== NO RESULT ANIMATION ===== */
@@ -100,19 +127,12 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     0%, 100% { opacity: 1; }
     50% { opacity: 0.5; }
 }
+</style>
 
 
 
 
 	
-/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
-</style>
-<style id="classic-theme-styles-inline-css">
-/*! This file is auto-generated */
-.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
-/*# sourceURL=/wp-includes/css/classic-themes.min.css */
-</style>
-
 <style id="global-styles-inline-css">
 :root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
 /*# sourceURL=global-styles-inline-css */
@@ -1280,6 +1300,427 @@ _stq.push([ "clickTrackerInit", "251571336", "2" ]);
     0%, 100% { opacity: 1; }
     50% { opacity: 0.5; }
 }
+
+
+	<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // ===== PREMIUM SEARCH FUNCTIONALITY - FIXED =====
+    const searchToggle = document.getElementById('searchToggle');
+    const searchClose = document.getElementById('searchClose');
+    const headerDefault = document.getElementById('header-default');
+    const headerSearch = document.getElementById('header-search');
+    const searchInput = document.getElementById('headerSearchInput');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const sidebar = document.getElementById('sidebar');
+    const menuToggle = document.getElementById('menuToggle');
+    
+    // ===== CREATE SEARCH RESULTS DROPDOWN =====
+    const resultsContainer = document.createElement('div');
+    resultsContainer.id = 'searchResultsDropdown';
+    resultsContainer.className = 'absolute top-full left-0 right-0 mt-2 bg-white rounded-2xl shadow-2xl border border-gray-100 max-h-[70vh] overflow-y-auto z-50';
+    resultsContainer.style.display = 'none';
+    
+    // Add search results container after header-search
+    const headerSearchParent = headerSearch ? headerSearch.parentNode : null;
+    if (headerSearchParent) {
+        headerSearchParent.style.position = 'relative';
+        headerSearchParent.appendChild(resultsContainer);
+    }
+    
+    // ===== COLLECT ALL GAME/APP ITEMS FROM THE PAGE =====
+    function getAllItems() {
+        const items = [];
+        const seenTitles = new Set();
+        
+        // Get items from "Latest Games" section
+        document.querySelectorAll('section.pt-10 .grid > a, section:last-of-type .grid > a').forEach(function(link) {
+            const titleElement = link.querySelector('h3');
+            const categoryElement = link.querySelector('.truncate.text-xs.font-semibold.text-orange');
+            const typeElement = link.querySelector('.text-sm.text-gray-3 .truncate');
+            const imgElement = link.querySelector('.w-14.h-14 img');
+            const ratingElement = link.querySelector('.text-xs.flex.items-center.gap-0\\.5 span');
+            
+            if (titleElement && !seenTitles.has(titleElement.textContent.trim())) {
+                seenTitles.add(titleElement.textContent.trim());
+                items.push({
+                    title: titleElement.textContent.trim(),
+                    url: link.getAttribute('href'),
+                    category: categoryElement ? categoryElement.textContent.trim() : '',
+                    type: typeElement ? typeElement.textContent.trim() : '',
+                    img: imgElement ? imgElement.getAttribute('src') : '',
+                    rating: ratingElement ? ratingElement.textContent.trim() : '4.0',
+                    element: link,
+                    originalDisplay: link.style.display || ''
+                });
+            }
+        });
+        
+        // Get items from "Indispensable on your phone" section
+        document.querySelectorAll('.snap-start.shrink-0.w-\\[85\\%\\]').forEach(function(link) {
+            const titleElement = link.querySelector('h3');
+            if (titleElement && !seenTitles.has(titleElement.textContent.trim())) {
+                seenTitles.add(titleElement.textContent.trim());
+                const imgElement = link.querySelector('.w-10.h-10');
+                items.push({
+                    title: titleElement.textContent.trim(),
+                    url: link.getAttribute('href'),
+                    category: 'Featured',
+                    type: '',
+                    img: imgElement ? imgElement.getAttribute('src') : '',
+                    rating: '4.5',
+                    element: link,
+                    originalDisplay: link.style.display || ''
+                });
+            }
+        });
+        
+        // Get items from "Must have collection"
+        document.querySelectorAll('.grid-cols-2.md\\:grid-cols-3.xl\\:grid-cols-4 .group.relative').forEach(function(group) {
+            const titleElement = group.querySelector('h2');
+            if (titleElement && !seenTitles.has(titleElement.textContent.trim())) {
+                seenTitles.add(titleElement.textContent.trim());
+                const imgElement = group.querySelector('img');
+                const linkElement = group.querySelector('a[aria-label]');
+                items.push({
+                    title: titleElement.textContent.trim(),
+                    url: linkElement ? linkElement.getAttribute('href') : '#',
+                    category: 'Collection',
+                    type: '',
+                    img: imgElement ? imgElement.getAttribute('src') : '',
+                    rating: '4.2',
+                    element: group,
+                    originalDisplay: group.style.display || ''
+                });
+            }
+        });
+        
+        // Get items from "Latest Apps" section
+        document.querySelectorAll('section.pt-10 .grid > a').forEach(function(link) {
+            const titleElement = link.querySelector('h3');
+            if (titleElement && !seenTitles.has(titleElement.textContent.trim())) {
+                seenTitles.add(titleElement.textContent.trim());
+                const imgElement = link.querySelector('.w-14.h-14 img');
+                const categoryElement = link.querySelector('.truncate.text-xs.font-semibold.text-orange');
+                const typeElement = link.querySelector('.text-sm.text-gray-3 .truncate');
+                items.push({
+                    title: titleElement.textContent.trim(),
+                    url: link.getAttribute('href'),
+                    category: categoryElement ? categoryElement.textContent.trim() : 'App',
+                    type: typeElement ? typeElement.textContent.trim() : '',
+                    img: imgElement ? imgElement.getAttribute('src') : '',
+                    rating: '4.0',
+                    element: link,
+                    originalDisplay: link.style.display || ''
+                });
+            }
+        });
+        
+        // Get items from "Paid for you" section
+        document.querySelectorAll('section.pt-10 .grid > a').forEach(function(link) {
+            const titleElement = link.querySelector('h3');
+            if (titleElement && !seenTitles.has(titleElement.textContent.trim())) {
+                seenTitles.add(titleElement.textContent.trim());
+                const imgElement = link.querySelector('.w-14.h-14 img');
+                const categoryElement = link.querySelector('.truncate.text-xs.font-semibold.text-orange');
+                const typeElement = link.querySelector('.text-sm.text-gray-3 .truncate');
+                items.push({
+                    title: titleElement.textContent.trim(),
+                    url: link.getAttribute('href'),
+                    category: categoryElement ? categoryElement.textContent.trim() : 'Paid',
+                    type: typeElement ? typeElement.textContent.trim() : '',
+                    img: imgElement ? imgElement.getAttribute('src') : '',
+                    rating: '4.0',
+                    element: link,
+                    originalDisplay: link.style.display || ''
+                });
+            }
+        });
+        
+        return items;
+    }
+    
+    let allItems = [];
+    
+    // ===== RENDER SEARCH RESULTS IN DROPDOWN =====
+    function renderResults(results, query) {
+        resultsContainer.innerHTML = '';
+        
+        if (query.trim() === '') {
+            resultsContainer.style.display = 'none';
+            return;
+        }
+        
+        if (results.length === 0) {
+            resultsContainer.innerHTML = `
+                <div class="flex flex-col items-center justify-center py-10 px-4">
+                    <svg class="w-14 h-14 text-gray-300 mb-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
+                        <path d="M440-120v-80h-80q-17 0-28.5-11.5T320-240q0-17 11.5-28.5T360-280h120v-80H200q-33 0-56.5-23.5T120-440v-280q0-33 23.5-56.5T200-800h560q33 0 56.5 23.5T840-720v280q0 33-23.5 56.5T760-360H480v80h120q17 0 28.5 11.5T640-240q0 17-11.5 28.5T600-200H480v80h-40Zm-240-240h560v-280H200v280Z"/>
+                    </svg>
+                    <p class="text-gray-400 font-medium">No results for "<span class="text-primary">${query}</span>"</p>
+                    <p class="text-gray-300 text-sm mt-1">Try different keywords</p>
+                </div>
+            `;
+            resultsContainer.style.display = 'block';
+            return;
+        }
+        
+        let html = `
+            <div class="p-3 border-b border-gray-100 sticky top-0 bg-white/95 backdrop-blur-sm z-10">
+                <div class="flex items-center justify-between">
+                    <span class="text-xs font-semibold text-gray-400">${results.length} result${results.length > 1 ? 's' : ''} found</span>
+                    <span class="text-xs text-gray-300">ESC to close • Arrow keys to navigate</span>
+                </div>
+            </div>
+            <div class="p-2">
+        `;
+        
+        results.forEach(function(item, index) {
+            // Highlight matching text
+            let displayTitle = item.title;
+            const searchTerm = query.toLowerCase().trim();
+            const lowerTitle = item.title.toLowerCase();
+            const indexMatch = lowerTitle.indexOf(searchTerm);
+            
+            if (indexMatch !== -1) {
+                const before = item.title.substring(0, indexMatch);
+                const match = item.title.substring(indexMatch, indexMatch + searchTerm.length);
+                const after = item.title.substring(indexMatch + searchTerm.length);
+                displayTitle = `${before}<span class="bg-primary/20 text-primary font-bold">${match}</span>${after}`;
+            }
+            
+            html += `
+                <a href="${item.url}" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-gray-50 transition-all duration-150 group no-underline" data-index="${index}">
+                    <div class="w-11 h-11 rounded-xl overflow-hidden shrink-0 bg-gray-100 shadow-sm ring-1 ring-gray-100 group-hover:ring-primary/20">
+                        ${item.img ? `<img src="${item.img}" class="w-full h-full object-cover" alt="${item.title}" loading="lazy">` : `
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/10 to-primary/5 text-primary font-bold text-sm">
+                                ${item.title.charAt(0).toUpperCase()}
+                            </div>
+                        `}
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <div class="text-sm font-semibold text-gray-800 truncate">${displayTitle}</div>
+                        <div class="flex items-center gap-2 text-xs">
+                            ${item.category ? `<span class="text-primary font-medium">${item.category}</span>` : ''}
+                            ${item.type ? `<span class="text-gray-400">•</span><span class="text-gray-500">${item.type}</span>` : ''}
+                            ${item.rating ? `<span class="text-gray-400">•</span><span class="flex items-center gap-0.5 text-amber-500">${item.rating} <svg class="w-3 h-3" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></span>` : ''}
+                        </div>
+                    </div>
+                    <svg class="w-4 h-4 text-gray-300 group-hover:text-primary transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
+                        <path d="M504-480 348-636l56-56 212 212-212 212-56-56 156-156Z"/>
+                    </svg>
+                </a>
+            `;
+        });
+        
+        html += `</div>`;
+        resultsContainer.innerHTML = html;
+        resultsContainer.style.display = 'block';
+    }
+    
+    // ===== PERFORM SEARCH - ONLY BY TITLE =====
+    function performSearch(query) {
+        const searchTerm = query.toLowerCase().trim();
+        
+        // Reset all items to visible first
+        allItems.forEach(function(item) {
+            if (item.element) {
+                item.element.style.display = '';
+            }
+        });
+        
+        if (searchTerm === '') {
+            resultsContainer.style.display = 'none';
+            return;
+        }
+        
+        // Filter items - ONLY BY TITLE
+        const filtered = allItems.filter(function(item) {
+            return item.title.toLowerCase().includes(searchTerm);
+        });
+        
+        // Hide all items that don't match
+        allItems.forEach(function(item) {
+            if (item.element) {
+                const isMatch = item.title.toLowerCase().includes(searchTerm);
+                item.element.style.display = isMatch ? '' : 'none';
+            }
+        });
+        
+        // Render dropdown results
+        renderResults(filtered, query);
+    }
+    
+    // Initialize items after page load
+    setTimeout(function() {
+        allItems = getAllItems();
+        console.log('✅ Search System Initialized with ' + allItems.length + ' items');
+    }, 500);
+    
+    // ===== SEARCH TOGGLE =====
+    if (searchToggle && headerDefault && headerSearch) {
+        searchToggle.addEventListener('click', function() {
+            headerDefault.classList.add('opacity-0', 'pointer-events-none', '-translate-x-4');
+            headerDefault.classList.remove('opacity-100', 'pointer-events-auto', 'translate-x-0');
+            
+            headerSearch.classList.remove('opacity-0', 'pointer-events-none', 'translate-x-4');
+            headerSearch.classList.add('opacity-100', 'pointer-events-auto', 'translate-x-0');
+            
+            setTimeout(function() {
+                if (searchInput) {
+                    searchInput.focus();
+                    searchInput.select();
+                }
+            }, 100);
+        });
+    }
+    
+    if (searchClose && headerDefault && headerSearch) {
+        searchClose.addEventListener('click', function() {
+            headerSearch.classList.remove('opacity-100', 'pointer-events-auto', 'translate-x-0');
+            headerSearch.classList.add('opacity-0', 'pointer-events-none', 'translate-x-4');
+            
+            headerDefault.classList.remove('opacity-0', 'pointer-events-none', '-translate-x-4');
+            headerDefault.classList.add('opacity-100', 'pointer-events-auto', 'translate-x-0');
+            
+            if (searchInput) {
+                searchInput.value = '';
+            }
+            resultsContainer.style.display = 'none';
+            
+            allItems.forEach(function(item) {
+                if (item.element) {
+                    item.element.style.display = '';
+                }
+            });
+        });
+    }
+    
+    // ===== SEARCH INPUT LIVE =====
+    if (searchInput) {
+        let searchTimeout;
+        
+        searchInput.addEventListener('input', function(e) {
+            clearTimeout(searchTimeout);
+            const query = e.target.value;
+            
+            searchTimeout = setTimeout(function() {
+                performSearch(query);
+            }, 150);
+        });
+        
+        // Close search with Escape key
+        searchInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                if (resultsContainer.style.display === 'block') {
+                    resultsContainer.style.display = 'none';
+                    e.preventDefault();
+                } else {
+                    if (searchClose) {
+                        searchClose.click();
+                    }
+                }
+            }
+        });
+        
+        // Navigate results with arrow keys
+        searchInput.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+                e.preventDefault();
+                const results = resultsContainer.querySelectorAll('a');
+                if (results.length === 0) return;
+                
+                let currentIndex = -1;
+                results.forEach(function(el, idx) {
+                    if (el.classList.contains('bg-gray-50')) {
+                        currentIndex = idx;
+                        el.classList.remove('bg-gray-50');
+                    }
+                });
+                
+                if (e.key === 'ArrowDown') {
+                    currentIndex = Math.min(currentIndex + 1, results.length - 1);
+                } else {
+                    currentIndex = Math.max(currentIndex - 1, 0);
+                }
+                
+                if (currentIndex >= 0 && currentIndex < results.length) {
+                    results[currentIndex].classList.add('bg-gray-50');
+                    results[currentIndex].scrollIntoView({ block: 'nearest' });
+                }
+            }
+            
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                const selected = resultsContainer.querySelector('a.bg-gray-50');
+                if (selected) {
+                    window.location.href = selected.getAttribute('href');
+                } else {
+                    const firstResult = resultsContainer.querySelector('a');
+                    if (firstResult) {
+                        window.location.href = firstResult.getAttribute('href');
+                    }
+                }
+            }
+        });
+    }
+    
+    // ===== SIDEBAR TOGGLE =====
+    if (menuToggle && sidebar && sidebarOverlay) {
+        function openSidebar() {
+            sidebar.classList.remove('-translate-x-full');
+            sidebar.classList.add('translate-x-0');
+            sidebarOverlay.classList.remove('opacity-0', 'pointer-events-none');
+            sidebarOverlay.classList.add('opacity-100', 'pointer-events-auto');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeSidebar() {
+            sidebar.classList.remove('translate-x-0');
+            sidebar.classList.add('-translate-x-full');
+            sidebarOverlay.classList.remove('opacity-100', 'pointer-events-auto');
+            sidebarOverlay.classList.add('opacity-0', 'pointer-events-none');
+            document.body.style.overflow = '';
+        }
+        
+        menuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            if (sidebar.classList.contains('-translate-x-full')) {
+                openSidebar();
+            } else {
+                closeSidebar();
+            }
+        });
+        
+        sidebarOverlay.addEventListener('click', closeSidebar);
+    }
+    
+    // ===== CLOSE RESULTS ON OUTSIDE CLICK =====
+    document.addEventListener('click', function(e) {
+        if (resultsContainer && 
+            !resultsContainer.contains(e.target) && 
+            e.target !== searchInput && 
+            searchToggle && 
+            !searchToggle.contains(e.target) &&
+            searchClose && 
+            !searchClose.contains(e.target)) {
+            resultsContainer.style.display = 'none';
+        }
+    });
+    
+    // ===== KEYBOARD SHORTCUT: Ctrl+K or Cmd+K =====
+    document.addEventListener('keydown', function(e) {
+        if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+            e.preventDefault();
+            if (searchToggle) {
+                searchToggle.click();
+            }
+        }
+    });
+    
+    console.log('🔍 SMILFA Premium Search System Loaded!');
+    console.log('💡 Press Ctrl+K or Cmd+K to open search');
+});
+</script>
 
 	
 </body>
